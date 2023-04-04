@@ -1,0 +1,50 @@
+body{
+    background-color: #DFDFDF !important;
+}
+
+.contenedor {
+    display: flex;
+    height: 100vh;
+    /* z-index: 1; 
+    position: relative; */
+  }
+  
+  .sidebar {
+    width: 15%; /* Ancho del sidebar */
+    height: 100%; /* Altura del sidebar */
+    background-color: #24B6BD ; /* Color de fondo del sidebar */
+    overflow-y: scroll;
+    max-height: 100vh;
+  }
+  
+  .contenido {
+    flex-grow: 1; /* El contenido principal ocupa todo el espacio restante */
+    padding: 20px; /* Espacio dentro del contenido principal */
+    height: auto;
+    overflow-y: scroll;
+  }
+  
+  .espacio {
+    height: 10vh;
+  }
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #4b53c3 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #24B6BD ;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #4b53c3;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }

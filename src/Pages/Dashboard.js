@@ -17,7 +17,7 @@ class Dashboard extends React.Component {
 
            <Header style={{zIndex:"5"}} />
            <section >
-              <div className="col-2 bg-white " style={{height:"90vh" , overflow:"auto" , boxShadow:"3px 0 3px -2px rgba(0, 0, 0, 0.3)" , zIndex:"0"}}>
+              <div className="col-2 bg-white " style={{height:"90vh" , overflow:"hidden" , boxShadow:"3px 0 3px -2px rgba(0, 0, 0, 0.3)" , zIndex:"0"}}>
                 <Sidebar/>
               </div>
            </section>

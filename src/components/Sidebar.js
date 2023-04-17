@@ -1,3 +1,5 @@
+
+/*1
 import React, {useState}  from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/sidebar_styles.css'
@@ -8,7 +10,7 @@ function Sidebar () {
 
    /* const [sidebarOpen, setSidebarOpen] = useState(false); */
 
-   const [expandedItems, setExpandedItems] = useState([]);
+ /*2  const [expandedItems, setExpandedItems] = useState([]);
 
    const handleItemClick = (index) => {
      if (expandedItems.includes(index)) {
@@ -61,7 +63,7 @@ function Sidebar () {
      
         <ul >
           {menuItems.map((item, index) => (
-            <li key={index}>
+            <li className="cursor1" key={index}>
               <span onClick={() => handleItemClick(index)}>{item.name}</span>
               {expandedItems.includes(index) && (
               <ul>
@@ -84,13 +86,94 @@ function Sidebar () {
       onSetOpen={setSidebarOpen}
     
       <button onClick={() => setSidebarOpen(true)}>Open sidebar</button>
-                */}
+                */  /*3
 
 
 
         </React.Fragment>
 
      );
+}
+
+export default Sidebar;
+
+*/
+
+import React, {useState}  from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../css/sidebar_styles.css'
+import Accordion from 'react-bootstrap/Accordion';
+
+
+import { Container, Row, Col, Button, Navbar, Nav, NavDropdown } from 'react-bootstrap';
+
+
+
+
+function Sidebar () {
+
+  const [isVisible, setIsVisible] = useState("ham");
+
+
+  return (  
+
+
+    <React.Fragment>
+      
+<Container fluid style={{  maxWidth:"15vw" , minHeight:"100vh" , justifyContent: 'flex-start', position: 'absolute', left: 0}}   className={` bg-white  ${isVisible}`}   >
+
+    <Nav defaultActiveKey="/home" className="flex-column bg-white " >
+      <Accordion>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>Accordion Item #1</Accordion.Header>
+              <Accordion.Body>
+                Lorem 1
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="1">
+              <Accordion.Header>Accordion Item #2</Accordion.Header>
+              <Accordion.Body>
+                Lorem 2 
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="3">
+              <Accordion.Header>Accordion Item #3</Accordion.Header>
+              <Accordion.Body>
+                Lorem 3
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="4">
+              <Accordion.Header>Accordion Item #4</Accordion.Header>
+              <Accordion.Body>
+                Lorem 4 
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="5">
+              <Accordion.Header>Accordion Item #5</Accordion.Header>
+              <Accordion.Body>
+                Lorem 5
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="6">
+              <Accordion.Header>Accordion Item #6</Accordion.Header>
+              <Accordion.Body>
+                Lorem 6 
+              </Accordion.Body>
+            </Accordion.Item>
+      </Accordion>
+    </Nav>
+
+</Container>
+    
+
+
+
+    
+
+</React.Fragment>
+
+
+  );
 }
 
 export default Sidebar;

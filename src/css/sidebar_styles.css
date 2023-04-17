@@ -27,24 +27,24 @@ body{
   .espacio {
     height: 10vh;
   }
-  /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #4b53c3 #ffffff;
+
+
+  .cursor1{
+    cursor: pointer;
   }
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 16px;
+.ham{
+  visibility: hidden;
+}
+
+
+  @media (min-width:1000px){
+
+.ham{
+
+visibility:visible;
+
   }
 
-  *::-webkit-scrollbar-track {
-    background: #24B6BD ;
   }
-
-  *::-webkit-scrollbar-thumb {
-    background-color: #4b53c3;
-    border-radius: 10px;
-    border: 3px solid #ffffff;
-  }
+  

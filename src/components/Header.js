@@ -1,44 +1,79 @@
-import React from "react";
+import React  , {useState} from "react";
+import Sidebar from "../components/Sidebar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/header.css'
-import logo from '../images/Logo - Vertical Blanco.png'
+import logo from '../images/Imagotipo - Blanco.png'
+
 import user from '../images/user_icon.png'
 
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 function Header () {
+
+  const [isVisible, setIsVisible] = useState("ham");
+
+
+  function toggleVisibility() {
+    setIsVisible(!isVisible);
+  }
+
+
+
     return ( 
 
         <React.Fragment>
 
-            <div className="container-fluid contenedor2 bg-primary bg-gradient">
-                
 
-                    <div className="col-2  px-0  overflow-hidden ">
-                        <div className="row justify-content-center">
-                            <div className="col-6 mt-3 text-center">
-                                <img src={logo} className=" logo_header " ></img>
-                            </div>
-                        </div>
-                        
-                    </div>
 
-                    <div className="col-2 bg-danger">
 
-                    </div>
+<Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+      <Container>
+        <Navbar.Brand  href="#home"><img src={logo}  width="40"
+              height="30"></img></Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Nav>
+            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes">
+              Dank memes
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+       
+        <button onClick={toggleVisibility}>Mostrar/Ocultar Div</button>
+      <Sidebar isDivVisible={isVisible} />
+      </Container>
+    </Navbar>
 
-                    <div className="col-6 bg-warning">
 
-                    </div>
 
-                    <div className="col-2 bg-success">
-                        <div className="row ">
-                            <div className="col-3 my-4 align-self-top">
-                                <img src={user} className="img-fluid"></img>
-                            </div>
-                        </div>
-                    </div>
 
-               
-            </div>
+
+ 
+    
+  
+
+
+
+ 
 
         </React.Fragment>
 

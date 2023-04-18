@@ -13,14 +13,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Header () {
 
-  const [isVisible, setIsVisible] = useState("ham");
-
-
-  function toggleVisibility() {
-    setIsVisible(!isVisible);
-  }
-
-
+ 
 
     return ( 
 
@@ -58,8 +51,7 @@ function Header () {
           </Nav>
         </Navbar.Collapse>
        
-        <button onClick={toggleVisibility}>Mostrar/Ocultar Div</button>
-      <Sidebar isDivVisible={isVisible} />
+        
       </Container>
     </Navbar>
 

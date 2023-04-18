@@ -4,6 +4,9 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom';
 
 import Logearse from './Pages/Logearse';
 import Dashboard from './Pages/Dashboard';
+import Tres from './Pages/Tres';
+
+
 
 function App() {
   return (
@@ -17,6 +20,7 @@ function App() {
 
         <Route path='/' element={<Logearse/>}/>
         <Route path='/dashboard' element={<Dashboard/>}/>
+        <Route path='/tres' element={<Tres/>}/>
 
 
       </Routes>

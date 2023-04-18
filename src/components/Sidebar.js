@@ -112,7 +112,7 @@ import { Container, Row, Col, Button, Navbar, Nav, NavDropdown } from 'react-boo
 
 function Sidebar () {
 
-  const [isVisible, setIsVisible] = useState("ham");
+  
 
 
   return (  
@@ -120,9 +120,12 @@ function Sidebar () {
 
     <React.Fragment>
       
-<Container fluid style={{  maxWidth:"15vw" , minHeight:"100vh" , justifyContent: 'flex-start', position: 'absolute', left: 0}}   className={` bg-white  ${isVisible}`}   >
+<Container fluid style={{  maxWidth:"15vw" , minHeight:"92vh" , justifyContent: 'flex-start', position: 'absolute', left: 0 , }} className="bg-white ham"     >
 
-    <Nav defaultActiveKey="/home" className="flex-column bg-white " >
+
+<div style={{overflowY: "auto" , maxHeight:"90vh"}} className="bg-danger" >
+
+<Nav defaultActiveKey="/home" className="flex-column bg-white " >
       <Accordion>
             <Accordion.Item eventKey="0">
               <Accordion.Header>Accordion Item #1</Accordion.Header>
@@ -160,8 +163,97 @@ function Sidebar () {
                 Lorem 6 
               </Accordion.Body>
             </Accordion.Item>
+            <Accordion.Item eventKey="7">
+              <Accordion.Header>Accordion Item #7</Accordion.Header>
+              <Accordion.Body>
+                Lorem 7
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="8">
+              <Accordion.Header>Accordion Item #8</Accordion.Header>
+              <Accordion.Body>
+                Lorem 8
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="9">
+              <Accordion.Header>Accordion Item #9</Accordion.Header>
+              <Accordion.Body>
+                Lorem 9
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="10">
+              <Accordion.Header>Accordion Item #10</Accordion.Header>
+              <Accordion.Body>
+                Lorem 10 
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey="11">
+              <Accordion.Header>Accordion Item #11</Accordion.Header>
+              <Accordion.Body>
+                Lorem 11
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="12">
+              <Accordion.Header>Accordion Item #12</Accordion.Header>
+              <Accordion.Body>
+                Lorem 12 
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="13">
+              <Accordion.Header>Accordion Item #13</Accordion.Header>
+              <Accordion.Body>
+                Lorem 13
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="14">
+              <Accordion.Header>Accordion Item #14</Accordion.Header>
+              <Accordion.Body>
+                Lorem 14 
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="15">
+              <Accordion.Header>Accordion Item #15</Accordion.Header>
+              <Accordion.Body>
+                Lorem 15
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="16">
+              <Accordion.Header>Accordion Item #16</Accordion.Header>
+              <Accordion.Body>
+                Lorem 16 
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="17">
+              <Accordion.Header>Accordion Item #17</Accordion.Header>
+              <Accordion.Body>
+                Lorem 17
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="18">
+              <Accordion.Header>Accordion Item #18</Accordion.Header>
+              <Accordion.Body>
+                Lorem 18
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="19">
+              <Accordion.Header>Accordion Item #19</Accordion.Header>
+              <Accordion.Body>
+                Lorem 19
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="20">
+              <Accordion.Header>Accordion Item #20</Accordion.Header>
+              <Accordion.Body>
+                Lorem 20 
+              </Accordion.Body>
+            </Accordion.Item>
       </Accordion>
     </Nav>
+
+</div>
+
+    
 
 </Container>
     

@@ -5,35 +5,47 @@ import Header from "../components/Header";
 import Area from "../components/Area";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Uno from "./Uno";
+import Dos from './Dos';
+import { Col, Row, Container } from "react-bootstrap";
 
 
 
-class Dashboard extends React.Component {
-    state = {  } 
-    render() { 
-        return (
+function Dashboard () {
 
-          <React.Fragment>
+ 
 
-           <Header />
+  return (  
+
+<React.Fragment>
+
+     <Header/>
+      
+
+    <Container fluid>
+
+      <Row>
+
+        <Col sm={2} className=""><Sidebar/></Col>
+
+        <Col sm={10} className=""><Area/></Col>
+
+      </Row>
+
+    </Container>
+    
+      
+
+
+</React.Fragment>
 
 
 
-  <Sidebar/>
-
-
-             
-
-                
-              
-               
-          </React.Fragment>
-          
-        );
-    }
+  );
 }
 
+export default Dashboard;
 
 
- export default Dashboard ;
+
  
